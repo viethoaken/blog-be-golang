@@ -15,4 +15,6 @@ func Setup(app *fiber.App) {
 	app.Get("/api/post/:id", controller.DetailPost)
 	app.Put("/api/updatepost/:id", controller.UpdatePost)
 	app.Delete("/api/deletepost/:id", controller.DeletePost)
+	app.Post("/api/upload-image", controller.Upload)
+	app.Static("/api/uploads", "./uploads")
 }
